@@ -25,11 +25,12 @@ public class ItineraryController {
     private final ItineraryDao itineraryDao;
     private final UserDao userDao;
     private final GeocodingService geocodingService = new GeocodingService();
-    private final PlacesService placesService = new PlacesService();
+    private final PlacesService placesService;
 
-    public ItineraryController(ItineraryDao itineraryDao, UserDao userDao) {
+    public ItineraryController(ItineraryDao itineraryDao, UserDao userDao, PlacesService placesService) {
         this.itineraryDao = itineraryDao;
         this.userDao = userDao;
+        this.placesService = placesService;
     }
 
     @GetMapping("/itineraries")

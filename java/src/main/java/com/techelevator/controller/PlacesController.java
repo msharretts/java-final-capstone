@@ -20,11 +20,12 @@ import java.util.List;
 @CrossOrigin
 public class PlacesController {
 
-    private final PlacesService placesService = new PlacesService();
+    private final PlacesService placesService;
     private final LandmarkDao landmarkDao;
     private final ItineraryDao itineraryDao;
 
-    public PlacesController(LandmarkDao landmarkDao, ItineraryDao itineraryDao) {
+    public PlacesController(PlacesService placesService, LandmarkDao landmarkDao, ItineraryDao itineraryDao) {
+        this.placesService = placesService;
         this.landmarkDao = landmarkDao;
         this.itineraryDao = itineraryDao;
     }

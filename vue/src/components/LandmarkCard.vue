@@ -54,7 +54,7 @@ export default {
 
             const baseURL = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=95&photo_reference=';
 
-            const apiKey = '&key=AIzaSyBqJyZCzD-m22Izo98cXLx_PcND6cHoKWI';
+            const apiKey = '&key=' + import.meta.env.VITE_GOOGLE_API_KEY;
 
             return (baseURL + photoRef + apiKey);
 

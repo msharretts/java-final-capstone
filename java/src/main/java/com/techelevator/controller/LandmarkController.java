@@ -17,10 +17,11 @@ public class LandmarkController {
 
     private final LandmarkDao landmarkDao;
     private final GeocodingService geocodingService = new GeocodingService();
-    private final PlacesService placesService = new PlacesService();
+    private final PlacesService placesService;
 
-    public LandmarkController(LandmarkDao landmarkDao) {
+    public LandmarkController(LandmarkDao landmarkDao, PlacesService placesService) {
         this.landmarkDao = landmarkDao;
+        this.placesService = placesService;
     }
 
     @GetMapping("/landmarks")

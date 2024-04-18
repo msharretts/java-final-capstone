@@ -71,7 +71,7 @@ export default {
             const zoomLevel = this.zoomLevel;
             const middleURL = '&path=weight:7%7Ccolor:red%7Cenc:';
             const line = this.polyline;
-            const APIKey = '&key=AIzaSyBqJyZCzD-m22Izo98cXLx_PcND6cHoKWI';
+            const APIKey = '&key=' + import.meta.env.VITE_GOOGLE_API_KEY;
 
             return (baseURL + lat + comma + lng + zoomURL + zoomLevel + ('&markers=size:mid|color:yellow|label:D|') + lat + comma + lng + middleURL + line + APIKey);
         }
